@@ -1,8 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+@import "spacing";
+@import "colors";
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: "Lato", sans-serif;
+
+  &:focus {
+    outline: 2px solid var(--orange-6);
+  }
 }
 
 html {
@@ -11,6 +19,7 @@ html {
 }
 
 body {
-  color: #2d3436;
+  color: var(--grey-8);
   font-size: 1.6rem;
+  background-color: var(--grey-1);
 }

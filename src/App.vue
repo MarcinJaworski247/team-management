@@ -11,4 +11,16 @@
   display: flex;
   justify-content: center;
 }
+
+@media (max-width: 800px) {
+  .main-container {
+    margin: 50px 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-container {
+    margin: 0;
+  }
+}
 </style>
