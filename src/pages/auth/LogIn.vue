@@ -15,7 +15,7 @@
       <div>
         <input
           type="email"
-          v-model="email"
+          v-model="emailInput"
           placeholder="Email"
           class="login-form__input mb-2"
         />
@@ -23,7 +23,7 @@
       <div>
         <input
           type="password"
-          v-model="password"
+          v-model="passwordInput"
           placeholder="Password"
           class="login-form__input"
         />
@@ -49,18 +49,19 @@
   </section>
 </template>
 <script lang="ts" setup>
+import { ref } from "vue";
 import { useRouter } from "vue-router";
-import { storeToRefs } from "pinia";
 import { useAuthStore } from "@/stores/auth";
 import basketballImageUrl from "@/assets/images/basketball.jpg";
 
 const authStore = useAuthStore();
-const { email, password } = storeToRefs(authStore);
 
+const emailInput = ref("");
+const passwordInput = ref("");
 const router = useRouter();
 
 function onLogin() {
-  authStore.login();
+  authStore.login(emailInput.value, passwordInput.value);
   router.push({
     name: "dashboard",
   });
