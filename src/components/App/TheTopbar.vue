@@ -8,26 +8,33 @@
       />
       <h1>Team mngmnt.</h1>
     </header>
-    <div
-      v-if="token"
-      class="topbar__user"
-    >
-      <span
-        class="topbar__logout mr-2"
-        @click="logout"
+    <div class="flex">
+      <div class="topbar__tools">
+        <language-switch />
+      </div>
+      <div
+        v-if="token"
+        class="topbar__user"
       >
-        LOGOUT
-      </span>
-      <account-circle
-        :size="48"
-        class="topbar__user-icon"
-      />
+        <button
+          type="button"
+          class="topbar__logout mr-2"
+          @click="logout"
+        >
+          {{ $t("auth.signOut") }}
+        </button>
+        <account-circle
+          :size="48"
+          class="topbar__user-icon"
+        />
+      </div>
     </div>
   </div>
 </template>
 <script lang="ts" setup>
 import MenuIcon from "vue-material-design-icons/Menu.vue";
 import AccountCircle from "vue-material-design-icons/AccountCircle.vue";
+import LanguageSwitch from "./LanguageSwitch.vue";
 import { storeToRefs } from "pinia";
 import { useAuthStore } from "@/stores/auth";
 import { useRouter } from "vue-router";
@@ -51,6 +58,11 @@ function logout() {
 }
 </script>
 <style lang="scss" scoped>
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
 .topbar {
   background-color: var(--grey-5);
   height: 60px;
@@ -90,6 +102,9 @@ function logout() {
     cursor: pointer;
     font-weight: 700;
     letter-spacing: 1.3px;
+    border: none;
+    background: none;
+    text-transform: uppercase;
 
     &:hover {
       color: var(--orange-8);

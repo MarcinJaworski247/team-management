@@ -1,0 +1,15 @@
+{
+  "auth": {
+    "login": "Log in",
+    "email": "Email",
+    "password": "Password",
+    "dontHaveAccount": "Don't have account yet?",
+    "signup": "Sign up!",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "loginButton": "Log in",
+    "signupButton": "Sign up",
+    "signupTitle": "Sign up",
+    "signOut": "Sign out"
+  }
+}

@@ -2,19 +2,18 @@ import { defineStore } from "pinia";
 
 export const useAuthStore = defineStore("auth", {
   state: () => ({
-    firstName: null as String | null,
-    lastName: null as String | null,
-    email: null as String | null,
-    password: null as String | null,
-    token: null as String | null,
+    firstName: null as string | null,
+    lastName: null as string | null,
+    email: null as string | null,
+    password: null as string | null,
+    token: null as string | null,
   }),
   actions: {
-    login(email: String, password: String) {
+    login(email: string, password: string) {
       this.firstName = "Joe";
       this.lastName = " Doe";
       this.email = email;
 
-      console.log(this.email + " " + this.password);
       this.token = "token";
     },
     signup() {

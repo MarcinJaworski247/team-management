@@ -1,0 +1,15 @@
+{
+  "auth": {
+    "login": "Logowanie",
+    "email": "Email",
+    "password": "Hasło",
+    "dontHaveAccount": "Nie masz jeszcze konta?",
+    "signup": "Zarejestruj się!",
+    "firstName": "Imię",
+    "lastName": "Nazwisko",
+    "loginButton": "Zaloguj",
+    "signupButton": "Zarejestruj",
+    "signupTitle": "Rejestracja",
+    "signOut": "Wyloguj"
+  }
+}

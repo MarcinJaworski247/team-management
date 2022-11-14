@@ -3,20 +3,20 @@
     <div class="login-form__image-wrapper">
       <img
         :src="basketballImageUrl"
-        alt="A picture of basketball in basket"
+        alt="A picture of basketball in basket."
         class="login-form__image"
       />
     </div>
 
     <div class="px-3 pt-4">
       <header class="login-form__header mb-4">
-        <h1>Log in</h1>
+        <h1>{{ $t("auth.login") }}</h1>
       </header>
       <div>
         <input
           type="email"
           v-model="emailInput"
-          placeholder="Email"
+          :placeholder="$t('auth.email')"
           class="login-form__input mb-2"
         />
       </div>
@@ -24,7 +24,7 @@
         <input
           type="password"
           v-model="passwordInput"
-          placeholder="Password"
+          :placeholder="$t('auth.password')"
           class="login-form__input"
         />
       </div>
@@ -33,16 +33,16 @@
           @click="onLogin"
           class="login-form__button mb-4"
         >
-          Log in
+          {{ $t("auth.loginButton") }}
         </button>
       </div>
       <div>
-        Dont't have account yet?
+        {{ $t("auth.dontHaveAccount") }}
         <router-link
           :to="{ name: 'signup' }"
           class="login-form__sign-up"
         >
-          Sign up!
+          {{ $t("auth.signup") }}
         </router-link>
       </div>
     </div>

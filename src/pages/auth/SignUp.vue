@@ -1,13 +1,13 @@
 <template>
   <section class="signup-form px-3 pt-4">
     <header class="signup-form__header mb-4">
-      <h1>Sign up</h1>
+      <h1>{{ $t("auth.signupTitle") }}</h1>
     </header>
     <div>
       <input
         type="text"
         v-model="firstName"
-        placeholder="First name"
+        :placeholder="$t('auth.firstName')"
         class="signup-form__input mb-2"
       />
     </div>
@@ -15,7 +15,7 @@
       <input
         type="text"
         v-model="lastName"
-        placeholder="Last name"
+        :placeholder="$t('auth.lastName')"
         class="signup-form__input mb-2"
       />
     </div>
@@ -23,7 +23,7 @@
       <input
         type="email"
         v-model="email"
-        placeholder="Email"
+        :placeholder="$t('auth.email')"
         class="signup-form__input mb-2"
       />
     </div>
@@ -31,7 +31,7 @@
       <input
         type="password"
         v-model="password"
-        placeholder="Password"
+        :placeholder="$t('auth.password')"
         class="signup-form__input mb-2"
       />
     </div>
@@ -40,7 +40,7 @@
         @click="authStore.signup"
         class="signup-form__button"
       >
-        Sign up
+        {{ $t("auth.signupButton") }}
       </button>
     </div>
   </section>

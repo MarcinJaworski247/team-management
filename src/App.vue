@@ -1,7 +1,7 @@
 <template>
   <the-topbar @on-navbar-toggle="toggleNavbar" />
   <div class="wrapper">
-    <transition>
+    <transition name="slide">
       <the-navbar v-if="isNavbarVisible && token" />
     </transition>
     <div class="main-container">
@@ -48,5 +48,27 @@ function toggleNavbar() {
   .main-container {
     margin: 0;
   }
+}
+
+.slide-enter {
+  transform: translateX(100%);
+}
+.slide-enter-to {
+  transform: translateX(0);
+}
+.slide-enter-active {
+  // position: absolute;
+}
+
+.slide-leave {
+  transform: translateX(0);
+}
+.slide-leave-to {
+  transform: translateX(-100%);
+}
+
+.slide-enter-active,
+.slide-leave-active {
+  transition: all 750ms ease;
 }
 </style>
