@@ -31,9 +31,10 @@
 <script lang="ts" setup>
 import { ref, onMounted, onUnmounted } from "vue";
 import TranslateIcon from "vue-material-design-icons/Translate.vue";
+import { useI18n } from "vue-i18n";
 
-let selectVisible = ref<boolean>(false);
-let currentLanguage = ref<string>("");
+const selectVisible = ref<boolean>(false);
+const currentLanguage = ref<string>("");
 
 function setLanguage() {
   currentLanguage.value = localStorage.getItem("lang") ?? "en";
@@ -55,7 +56,10 @@ function toggleSelect() {
   }
 }
 
+const { locale } = useI18n({ useScope: "global" });
+
 function switchLanguage(lang: string) {
+  locale.value = lang;
   localStorage.setItem("lang", lang);
   setLanguage();
 }
