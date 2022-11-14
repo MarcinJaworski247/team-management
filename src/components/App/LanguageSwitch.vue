@@ -8,6 +8,7 @@
     <transition>
       <div
         class="select"
+        ref="selectRef"
         v-if="selectVisible"
       >
         <div
@@ -32,6 +33,8 @@
 import { ref, onMounted, onUnmounted } from "vue";
 import TranslateIcon from "vue-material-design-icons/Translate.vue";
 import { useI18n } from "vue-i18n";
+import type { OnClickOutsideHandler } from "@vueuse/core";
+import { onClickOutside } from "@vueuse/core";
 
 const selectVisible = ref<boolean>(false);
 const currentLanguage = ref<string>("");
@@ -63,6 +66,12 @@ function switchLanguage(lang: string) {
   localStorage.setItem("lang", lang);
   setLanguage();
 }
+
+const selectRef = ref(null);
+
+onClickOutside(selectRef, () => {
+  selectVisible.value = false;
+});
 </script>
 <style lang="scss" scoped>
 .relative {

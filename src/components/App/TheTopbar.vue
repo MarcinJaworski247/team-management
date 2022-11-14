@@ -9,9 +9,7 @@
       <h1>Team mngmnt.</h1>
     </header>
     <div class="flex">
-      <div class="topbar__tools">
-        <language-switch />
-      </div>
+      <language-switch class="mr-2" />
       <div
         v-if="token"
         class="topbar__user"
@@ -61,7 +59,6 @@ function logout() {
 .flex {
   display: flex;
   align-items: center;
-  gap: 32px;
 }
 .topbar {
   background-color: var(--grey-5);
