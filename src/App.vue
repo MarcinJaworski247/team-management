@@ -32,7 +32,7 @@ function toggleNavbar() {
 }
 
 .main-container {
-  margin: 100px 200px;
+  margin: 160px 200px 100px 200px;
   display: flex;
   justify-content: center;
   width: 100%;

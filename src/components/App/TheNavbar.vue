@@ -11,5 +11,6 @@
   position: fixed;
   display: flex;
   justify-content: center;
+  top: 60px;
 }
 </style>
