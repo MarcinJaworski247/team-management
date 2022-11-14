@@ -32,8 +32,8 @@
 import { ref, onMounted, onUnmounted } from "vue";
 import TranslateIcon from "vue-material-design-icons/Translate.vue";
 
-let selectVisible = ref(false);
-let currentLanguage = ref();
+let selectVisible = ref<boolean>(false);
+let currentLanguage = ref<string>("");
 
 function setLanguage() {
   currentLanguage.value = localStorage.getItem("lang") ?? "en";
@@ -56,7 +56,6 @@ function toggleSelect() {
 }
 
 function switchLanguage(lang: string) {
-  //TODO change locale in i18n instance
   localStorage.setItem("lang", lang);
   setLanguage();
 }

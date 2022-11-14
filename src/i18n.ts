@@ -7,7 +7,9 @@ const messages = {
   en,
 };
 
-export default createI18n({
+type MessageSchema = typeof pl;
+
+export default createI18n<[MessageSchema], "pl" | "en">({
   legacy: false,
   globalInjection: true,
   locale: localStorage.getItem("lang") ?? "en",

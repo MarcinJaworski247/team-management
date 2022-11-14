@@ -56,8 +56,8 @@ import basketballImageUrl from "@/assets/images/basketball.jpg";
 
 const authStore = useAuthStore();
 
-const emailInput = ref("");
-const passwordInput = ref("");
+const emailInput = ref<string>("");
+const passwordInput = ref<string>("");
 const router = useRouter();
 
 function onLogin() {
