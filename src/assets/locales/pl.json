@@ -11,5 +11,12 @@
     "signupButton": "Zarejestruj",
     "signupTitle": "Rejestracja",
     "signOut": "Wyloguj"
+  },
+  "navbar": {
+    "team": "Drużyna",
+    "games": "Mecze",
+    "stats": "Statystyki",
+    "schedule": "Terminarz",
+    "workouts": "Treningi"
   }
 }

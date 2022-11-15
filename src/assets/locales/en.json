@@ -11,5 +11,12 @@
     "signupButton": "Sign up",
     "signupTitle": "Sign up",
     "signOut": "Sign out"
+  },
+  "navbar": {
+    "team": "Team",
+    "games": "Games",
+    "stats": "Stats",
+    "schedule": "Schedule",
+    "workouts": "Workouts"
   }
 }
