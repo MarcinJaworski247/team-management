@@ -9,7 +9,7 @@
   font-family: "Lato", sans-serif;
 
   &:focus {
-    outline: 2px solid var(--orange-6);
+    outline: 2px solid var(--orange-medium);
   }
 }
 
@@ -19,7 +19,7 @@ html {
 }
 
 body {
-  color: var(--grey-8);
+  color: var(--text-primary);
   font-size: 1.6rem;
-  background-color: var(--grey-1);
+  background-color: var(--background-primary);
 }

@@ -15,7 +15,7 @@
   width: 196px;
   height: 100%;
   top: 60px;
-  background-color: var(--grey-3);
+  background-color: var(--background-ternary);
   position: fixed;
   display: flex;
   justify-content: center;
@@ -36,8 +36,8 @@
     letter-spacing: 1.3px;
 
     &:hover {
-      color: var(--orange-8);
-      background-color: var(--grey-2);
+      color: var(--orange-dark);
+      background-color: var(--background-secondary);
       border-radius: 9px;
     }
   }

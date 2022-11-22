@@ -1,4 +1,5 @@
 :root {
+  /*
   --orange-0: #fff4e6;
   --orange-1: #ffe8cc;
   --orange-2: #ffd8a8;
@@ -20,4 +21,41 @@
   --grey-7: #495057;
   --grey-8: #343a40;
   --grey-9: #212529;
+
+  */
+  --background-primary: #f1f3f5; // --grey-1
+  --background-secondary: #e9ecef; // --grey-2
+  --background-ternary: #dee2e6; // --grey-3
+  --topbar: #adb5bd; // --grey-5
+
+  --text-primary: #343a40; // --grey-8
+  --text-secondary: ;
+
+  --grey-light: #adb5bd; // --grey-5
+  --grey-medium: #495057; // --grey-7
+  --grey-dark: #343a40; // --grey-8
+
+  --orange-light: #ffa94d; // --orange-4
+  --orange-medium: #fd7e14; // --orange-6
+  --orange-dark: #e8590c; // --orange-8
+  --orange-darkest: #d9480f; // --orange-9
+}
+
+.theme-dark {
+  --background-primary: #adb5bd; // --grey-5
+  --background-secondary: #868e96; // --grey-6
+  --background-ternary: #495057; // --grey-7
+  --topbar: #343a40; // --grey-8
+
+  --text-primary: #f1f3f5; // --grey-1
+  --text-secondary: ;
+
+  --grey-light: #adb5bd; // --grey-5
+  --grey-medium: #495057; // --grey-7
+  --grey-dark: #343a40; // --grey-8
+
+  --orange-light: #ffa94d; // --orange-4
+  --orange-medium: #fd7e14; // --orange-6
+  --orange-dark: #e8590c; // --orange-8
+  --orange-darkest: #d9480f; // --orange-9
 }

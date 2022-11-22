@@ -104,8 +104,8 @@ function onLogin() {
     transition: color 0.3s ease;
 
     &:hover {
-      color: var(--orange-8);
-      border-color: var(--orange-8);
+      color: var(--orange-dark);
+      border-color: var(--orange-dark);
     }
   }
 
@@ -115,12 +115,12 @@ function onLogin() {
 
     &:link,
     &:visited {
-      color: var(--orange-8);
+      color: var(--orange-dark);
     }
 
     &:hover,
     &:active {
-      color: var(--orange-9);
+      color: var(--orange-darkest);
     }
   }
 }

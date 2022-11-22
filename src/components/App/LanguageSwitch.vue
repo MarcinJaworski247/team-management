@@ -33,7 +33,6 @@
 import { ref, onMounted, onUnmounted } from "vue";
 import TranslateIcon from "vue-material-design-icons/Translate.vue";
 import { useI18n } from "vue-i18n";
-import type { OnClickOutsideHandler } from "@vueuse/core";
 import { onClickOutside } from "@vueuse/core";
 
 const selectVisible = ref<boolean>(false);
@@ -86,7 +85,7 @@ onClickOutside(selectRef, () => {
   position: absolute;
   left: -50%;
   height: auto;
-  background-color: var(--grey-3);
+  background-color: var(--background-ternary);
   border-radius: 4px;
   padding: 8px 32px;
   text-align: center;
@@ -96,12 +95,12 @@ onClickOutside(selectRef, () => {
     transition: all 0.3 ease;
     &:hover {
       cursor: pointer;
-      color: var(--orange-6);
+      color: var(--orange-medium);
     }
 
     &--selected {
       font-weight: 700;
-      color: var(--orange-8);
+      color: var(--orange-dark);
     }
   }
 }

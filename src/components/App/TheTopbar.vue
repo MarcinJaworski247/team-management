@@ -9,6 +9,7 @@
       <h1>Team mngmnt.</h1>
     </header>
     <div class="flex">
+      <theme-switch class="mr-2" />
       <language-switch class="mr-2" />
       <div
         v-if="token"
@@ -33,6 +34,7 @@
 import MenuIcon from "vue-material-design-icons/Menu.vue";
 import AccountCircle from "vue-material-design-icons/AccountCircle.vue";
 import LanguageSwitch from "./LanguageSwitch.vue";
+import ThemeSwitch from "./ThemeSwitch.vue";
 import { storeToRefs } from "pinia";
 import { useAuthStore } from "@/stores/auth";
 import { useRouter } from "vue-router";
@@ -61,7 +63,7 @@ function logout() {
   align-items: center;
 }
 .topbar {
-  background-color: var(--grey-5);
+  background-color: var(--topbar);
   height: 60px;
   display: flex;
   align-items: center;
@@ -106,7 +108,7 @@ function logout() {
     text-transform: uppercase;
 
     &:hover {
-      color: var(--orange-8);
+      color: var(--orange-dark);
     }
   }
 }
